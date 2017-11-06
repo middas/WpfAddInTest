@@ -9,5 +9,7 @@ namespace AddIn.Plugin.Views
         FrameworkElement GetControl();
 
         double GetHeight();
+
+        void SetHostCallback(IHostCallback callback);
     }
 }

@@ -6,20 +6,20 @@
         xmlns:local="clr-namespace:WpfAddinTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Background="DarkGray">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
-            <RowDefinition/>
-            <RowDefinition Height="25"/>
-        </Grid.RowDefinitions>
+    <ScrollViewer>
+        <Grid Name="WindowGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Name="PluginRow"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Main Label Top"/>
+            <Label Grid.Row="0" Content="Main Label Top"/>
 
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-            <ContentControl Name="PluginHolder"/>
-        </ScrollViewer>
+            <ContentControl Grid.Row="1" Name="PluginHolder"/>
 
-        <Label Grid.Row="2" Content="Main Label Bottom"/>
+            <Label Grid.Row="2" Content="Main Label Bottom"/>
 
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Window>

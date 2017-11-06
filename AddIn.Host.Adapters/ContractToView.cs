@@ -29,5 +29,10 @@ namespace AddIn.Host.Adapters
         {
             return _contract.GetHeight();
         }
+
+        public void SetHostCallback(IHostCallback callback)
+        {
+            _contract.SetHostCallback(new HostCallbackViewToContract(callback));
+        }
     }
 }

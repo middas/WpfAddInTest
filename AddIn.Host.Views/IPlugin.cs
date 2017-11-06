@@ -8,5 +8,7 @@ namespace AddIn.Host.Views
         FrameworkElement GetControl();
 
         double GetHeight();
+
+        void SetHostCallback(IHostCallback callback);
     }
 }

@@ -7,6 +7,7 @@ namespace Plugin
     [AddIn(nameof(Plugin))]
     public class Plugin : IPlugin
     {
+        private IHostCallback _Callback;
         private PluginControl _Control;
 
         public Plugin()
@@ -16,6 +17,11 @@ namespace Plugin
 
         public FrameworkElement GetControl()
         {
+            if (_Callback != null)
+            {
+                _Control.SetHeight(_Callback.GetHeight());
+            }
+
             return _Control;
         }
 
@@ -24,6 +30,11 @@ namespace Plugin
             _Control.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
 
             return _Control.DesiredSize.Height;
+        }
+
+        public void SetHostCallback(IHostCallback callback)
+        {
+            _Callback = callback;
         }
     }
 }

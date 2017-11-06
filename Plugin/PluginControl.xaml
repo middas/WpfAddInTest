@@ -6,15 +6,17 @@
              xmlns:local="clr-namespace:Plugin"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Background="White">
-    <Grid Height="300">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
-            <RowDefinition/>
-            <RowDefinition Height="25"/>
-        </Grid.RowDefinitions>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Name="PluginGrid" Height="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Plugin Label Top"/>
+            <Label Grid.Row="0" Content="Plugin Label Top"/>
 
-        <Label Grid.Row="2" Content="Plugin Label Bottom"/>
-    </Grid>
+            <Label Grid.Row="2" Content="Plugin Label Bottom"/>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

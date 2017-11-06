@@ -9,5 +9,7 @@ namespace AddIn.Contracts
         INativeHandleContract GetControl();
 
         double GetHeight();
+
+        void SetHostCallback(IHostCallbackContract callback);
     }
 }

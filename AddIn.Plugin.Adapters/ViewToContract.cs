@@ -27,5 +27,10 @@ namespace AddIn.Plugin.Adapters
         {
             return _view.GetHeight();
         }
+
+        public void SetHostCallback(IHostCallbackContract callback)
+        {
+            _view.SetHostCallback(new HostCallbackContractToView(callback));
+        }
     }
 }

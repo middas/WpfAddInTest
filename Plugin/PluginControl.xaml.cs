@@ -24,5 +24,10 @@ namespace Plugin
         {
             InitializeComponent();
         }
+
+        public void SetHeight(double height)
+        {
+            PluginGrid.Height = height;
+        }
     }
 }

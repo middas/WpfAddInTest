@@ -30,8 +30,17 @@ namespace WpfAddinTest
             _PluginToken = AddInStore.FindAddIns(typeof(IPlugin), _PluginPath, _AddInPath).FirstOrDefault();
             _Plugin = _PluginToken.Activate<IPlugin>(AddInSecurityLevel.FullTrust);
 
+            HostCallbackImpl impl = new HostCallbackImpl
+            {
+                _GetHeight = () =>
+                {
+                    return 300;
+                }
+            };
+            _Plugin.SetHostCallback(impl);
+
             var control = _Plugin.GetControl();
-            PluginHolder.Height = _Plugin.GetHeight();
+            //PluginHolder.Height = _Plugin.GetHeight();
 
             PluginHolder.Content = control;
         }
