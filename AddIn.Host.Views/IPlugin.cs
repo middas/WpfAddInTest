@@ -7,6 +7,6 @@ namespace AddIn.Host.Views
     {
         FrameworkElement GetControl();
 
-        int GetInt();
+        double GetHeight();
     }
 }

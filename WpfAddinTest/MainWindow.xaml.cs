@@ -31,7 +31,7 @@ namespace WpfAddinTest
             _Plugin = _PluginToken.Activate<IPlugin>(AddInSecurityLevel.FullTrust);
 
             var control = _Plugin.GetControl();
-            Console.WriteLine(_Plugin.GetInt());
+            PluginHolder.Height = _Plugin.GetHeight();
 
             PluginHolder.Content = control;
         }

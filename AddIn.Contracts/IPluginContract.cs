@@ -8,6 +8,6 @@ namespace AddIn.Contracts
     {
         INativeHandleContract GetControl();
 
-        int GetInt();
+        double GetHeight();
     }
 }

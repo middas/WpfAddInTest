@@ -25,9 +25,9 @@ namespace AddIn.Host.Adapters
             return fe;
         }
 
-        public int GetInt()
+        public double GetHeight()
         {
-            return _contract.GetInt();
+            return _contract.GetHeight();
         }
     }
 }

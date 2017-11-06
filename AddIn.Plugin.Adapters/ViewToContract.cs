@@ -23,9 +23,9 @@ namespace AddIn.Plugin.Adapters
             return inhc;
         }
 
-        public int GetInt()
+        public double GetHeight()
         {
-            return _view.GetInt();
+            return _view.GetHeight();
         }
     }
 }

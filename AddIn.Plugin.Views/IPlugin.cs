@@ -8,6 +8,6 @@ namespace AddIn.Plugin.Views
     {
         FrameworkElement GetControl();
 
-        int GetInt();
+        double GetHeight();
     }
 }

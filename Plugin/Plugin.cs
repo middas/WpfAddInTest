@@ -1,11 +1,5 @@
 ﻿using AddIn.Plugin.Views;
-using System;
 using System.AddIn;
-using System.AddIn.Contract;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Plugin
@@ -13,14 +7,23 @@ namespace Plugin
     [AddIn(nameof(Plugin))]
     public class Plugin : IPlugin
     {
-        public FrameworkElement GetControl()
+        private PluginControl _Control;
+
+        public Plugin()
         {
-            return new PluginControl();
+            _Control = new PluginControl();
         }
 
-        public int GetInt()
+        public FrameworkElement GetControl()
         {
-            return 5;
+            return _Control;
+        }
+
+        public double GetHeight()
+        {
+            _Control.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+
+            return _Control.DesiredSize.Height;
         }
     }
 }
